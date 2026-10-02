@@ -1,0 +1,1519 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Portfolio di Micaela Viscardi, danzatrice professionista e insegnante di danza classica.">
+    <title>Micaela Viscardi | Danzatrice e insegnante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #171713;
+            --paper: #ece9df;
+            --wine: #7a202a;
+            --cream: #f5f1e7;
+            --display: "Cormorant Garamond", Georgia, serif;
+            --sans: Manrope, Arial, sans-serif
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans)
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .site-header {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 92px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5vw;
+            color: #fff;
+            border-bottom: 1px solid #ffffff2d
+        }
+
+        .wordmark {
+            font-size: 12px;
+            letter-spacing: .24em;
+            font-weight: 500
+        }
+
+            .wordmark span {
+                font-family: var(--display);
+                font-style: italic;
+                font-size: 19px;
+                letter-spacing: .06em;
+                margin-right: 5px
+            }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: clamp(16px, 2vw, 34px);
+            font-size: 11px;
+            letter-spacing: .12em;
+            text-transform: uppercase
+        }
+
+            nav a {
+                opacity: .8;
+                transition: .2s
+            }
+
+                nav a:hover {
+                    opacity: 1
+                }
+
+        .nav-cta {
+            border: 1px solid #ffffff73;
+            padding: 11px 18px
+        }
+
+        .hero {
+            min-height: 760px;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #171713;
+            color: #fff
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 92px;
+            right: 0;
+            bottom: 0;
+            left: 43%;
+            background-image: url('image/Micaelaviscardi.png');
+            background-size: contain;
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-color: #000
+        }
+
+        .hero-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, #080807 0%, rgba(8, 8, 7, .98) 36%, rgba(8, 8, 7, .42) 57%, transparent 76%);
+            pointer-events: none
+        }
+
+        .hero-copy {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 1320px;
+            margin: auto;
+            padding-top: 66px
+        }
+
+        .eyebrow,
+        .section-label {
+            font-size: 10px;
+            letter-spacing: .25em;
+            font-weight: 600;
+            text-transform: uppercase
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #e0d9cc
+        }
+
+            .eyebrow:before {
+                content: "";
+                width: 30px;
+                height: 1px;
+                background: #c6a89d
+            }
+
+        h1,
+        h2,
+        blockquote {
+            font-family: var(--display);
+            font-weight: 400;
+            margin: 0;
+            line-height: .88;
+            letter-spacing: -.035em
+        }
+
+        h1 {
+            font-size: clamp(62px, 8vw, 122px);
+            max-width: 970px;
+            margin: 32px 0 28px
+        }
+
+            h1 em,
+            h2 em {
+                color: #c88d90;
+                font-weight: 400
+            }
+
+        .hero-intro {
+            max-width: 440px;
+            color: #d1cbc1;
+            font-family: var(--display);
+            font-size: 20px;
+            line-height: 1.45
+        }
+
+        .primary-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 34px;
+            margin-top: 26px;
+            padding: 16px 21px;
+            background: var(--cream);
+            color: var(--ink);
+            font-size: 10px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            font-weight: 600
+        }
+
+            .primary-button span {
+                font-size: 18px
+            }
+
+        .scroll-hint {
+            position: absolute;
+            z-index: 2;
+            right: 5vw;
+            bottom: 36px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            font-size: 9px;
+            letter-spacing: .18em
+        }
+
+            .scroll-hint span {
+                border: 1px solid #ffffff66;
+                width: 34px;
+                height: 34px;
+                border-radius: 50%;
+                display: grid;
+                place-items: center
+            }
+
+        .section {
+            padding: 120px 7vw
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 68px
+        }
+
+            .section-label span {
+                color: var(--wine)
+            }
+
+        .profile-grid,
+        .experience-grid,
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            gap: 9vw
+        }
+
+        h2 {
+            font-size: clamp(54px, 6vw, 88px)
+        }
+
+        .profile h2 em,
+        .experience h2 em {
+            color: var(--wine)
+        }
+
+        .profile-copy {
+            padding-top: 10px;
+            max-width: 580px
+        }
+
+            .profile-copy p,
+            .experience-grid > div > p {
+                font-size: 15px;
+                line-height: 1.9;
+                color: #4c4b45
+            }
+
+            .profile-copy .lead {
+                font-family: var(--display);
+                font-size: 25px;
+                line-height: 1.45;
+                color: var(--ink);
+                margin-top: 0
+            }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #bbb8af;
+            margin-top: 45px;
+            padding-top: 28px;
+            gap: 20px
+        }
+
+            .stats div {
+                display: flex;
+                flex-direction: column
+            }
+
+            .stats strong {
+                font: 500 42px var(--display);
+                color: var(--wine)
+            }
+
+            .stats span {
+                font-size: 9px;
+                text-transform: uppercase;
+                letter-spacing: .12em;
+                margin-top: 4px
+            }
+
+        .disciplines,
+        .contact {
+            background: #171713;
+            color: var(--cream)
+        }
+
+        .section-label.light span {
+            color: #c88d90
+        }
+
+        .disciplines-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 65px
+        }
+
+            .disciplines-head p {
+                width: 330px;
+                color: #a9a79f;
+                line-height: 1.8;
+                font-size: 14px
+            }
+
+        .discipline-list {
+            border-top: 1px solid #ffffff2b
+        }
+
+            .discipline-list article {
+                min-height: 145px;
+                border-bottom: 1px solid #ffffff2b;
+                display: grid;
+                grid-template-columns: 80px 1fr 1fr 50px;
+                align-items: center;
+                gap: 20px
+            }
+
+                .discipline-list article > span {
+                    color: #a56e73;
+                    font-size: 10px
+                }
+
+            .discipline-list h3 {
+                font: 400 clamp(26px, 3vw, 42px) var(--display);
+                margin: 0
+            }
+
+            .discipline-list p {
+                color: #aaa79f;
+                font-size: 13px;
+                max-width: 320px;
+                line-height: 1.7
+            }
+
+            .discipline-list b {
+                font-size: 23px;
+                font-weight: 400
+            }
+
+        .experience-grid > div:first-child > p {
+            max-width: 440px;
+            margin: 35px 0
+        }
+
+        .text-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 26px;
+            padding-bottom: 9px;
+            border-bottom: 1px solid var(--ink);
+            text-transform: uppercase;
+            font-size: 9px;
+            letter-spacing: .15em;
+            font-weight: 600
+        }
+
+        .timeline {
+            border-top: 1px solid #bcb8ae
+        }
+
+            .timeline article {
+                display: grid;
+                grid-template-columns: 130px 1fr;
+                gap: 20px;
+                padding: 28px 0;
+                border-bottom: 1px solid #bcb8ae
+            }
+
+            .timeline time {
+                font-size: 10px;
+                color: var(--wine);
+                letter-spacing: .08em
+            }
+
+            .timeline h3 {
+                font: 500 24px var(--display);
+                margin: 0 0 7px
+            }
+
+            .timeline p {
+                margin: 0;
+                font-size: 12px;
+                color: #6b6961
+            }
+
+
+        /* =========================
+           GALLERIA
+           ========================= */
+
+        .gallery-section {
+            background: #11110f;
+            color: var(--cream)
+        }
+
+            .gallery-section .section-label {
+                margin-bottom: 42px
+            }
+
+        .gallery-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 40px;
+            margin-bottom: 58px
+        }
+
+            .gallery-head h2 em {
+                color: #c88d90
+            }
+
+            .gallery-head p {
+                width: min(360px, 100%);
+                margin: 0;
+                color: #aaa79f;
+                font-size: 14px;
+                line-height: 1.8
+            }
+
+        .gallery-featured-main {
+            margin-bottom: 18px
+        }
+
+        .gallery-featured-grid {
+            columns: 3;
+            column-gap: 18px
+        }
+
+        .gallery-photo {
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: zoom-in;
+            overflow: hidden
+        }
+
+        .gallery-featured-grid .gallery-photo {
+            margin: 0 0 18px;
+            break-inside: avoid
+        }
+
+        .gallery-photo img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: transform .45s ease, opacity .3s ease
+        }
+
+        .gallery-photo:hover img {
+            transform: scale(1.018);
+            opacity: .92
+        }
+
+        .gallery-featured-main .gallery-photo img {
+            width: 100%;
+            max-height: 650px;
+            object-fit: cover;
+            object-position: center
+        }
+
+        .gallery-actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 42px
+        }
+
+        .gallery-open-all {
+            border: 1px solid #ffffff55;
+            background: transparent;
+            color: var(--cream);
+            padding: 16px 22px;
+            font: 600 10px var(--sans);
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background .2s ease, color .2s ease, border-color .2s ease
+        }
+
+            .gallery-open-all:hover {
+                background: var(--cream);
+                color: var(--ink);
+                border-color: var(--cream)
+            }
+
+        body.gallery-lock {
+            overflow: hidden
+        }
+
+        .gallery-modal,
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            display: none
+        }
+
+            .gallery-modal.is-open,
+            .lightbox.is-open {
+                display: block
+            }
+
+        .gallery-modal {
+            z-index: 1000;
+            overflow-y: auto;
+            background: #11110f;
+            color: var(--cream)
+        }
+
+        .gallery-modal-inner {
+            width: min(1500px, 90%);
+            margin: 0 auto;
+            padding: 78px 0 90px
+        }
+
+        .gallery-modal-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 35px;
+            padding-bottom: 30px;
+            margin-bottom: 34px;
+            border-bottom: 1px solid #ffffff2b
+        }
+
+            .gallery-modal-head p {
+                margin: 0 0 8px;
+                color: #c88d90;
+                font-size: 9px;
+                font-weight: 600;
+                letter-spacing: .25em;
+                text-transform: uppercase
+            }
+
+            .gallery-modal-head h2 {
+                font-size: clamp(48px, 6vw, 84px)
+            }
+
+        .gallery-close,
+        .lightbox-close,
+        .lightbox-arrow {
+            border: 1px solid #ffffff44;
+            background: rgba(0, 0, 0, .18);
+            color: #fff;
+            cursor: pointer
+        }
+
+        .gallery-close {
+            width: 46px;
+            height: 46px;
+            flex: 0 0 46px;
+            font-size: 24px;
+            line-height: 1
+        }
+
+        .gallery-all-grid {
+            columns: 4;
+            column-gap: 16px
+        }
+
+            .gallery-all-grid .gallery-photo {
+                margin: 0 0 16px;
+                break-inside: avoid
+            }
+
+        .lightbox {
+            z-index: 1100;
+            background: rgba(0, 0, 0, .97);
+            color: #fff
+        }
+
+        .lightbox-stage {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            padding: 46px 92px
+        }
+
+        .lightbox-image {
+            display: block;
+            max-width: 100%;
+            max-height: calc(100vh - 92px);
+            width: auto;
+            height: auto;
+            object-fit: contain
+        }
+
+        .lightbox-close {
+            position: absolute;
+            z-index: 2;
+            top: 22px;
+            right: 24px;
+            width: 46px;
+            height: 46px;
+            font-size: 25px;
+            line-height: 1
+        }
+
+        .lightbox-arrow {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            font-size: 25px;
+            line-height: 1
+        }
+
+        .lightbox-prev {
+            left: 24px
+        }
+
+        .lightbox-next {
+            right: 24px
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            font-size: 9px;
+            letter-spacing: .2em
+        }
+
+        .teaching {
+            background: var(--paper)
+        }
+
+            .teaching .section-label {
+                margin-bottom: 42px
+            }
+
+        .teaching-header-image {
+            width: 100%;
+            height: clamp(190px, 22vw, 300px);
+            margin: 0 0 78px;
+            overflow: hidden;
+            background: #d8d4ca
+        }
+
+            .teaching-header-image img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 40%;
+                filter: saturate(.78) contrast(.94);
+                transition: filter .4s ease, transform .6s ease
+            }
+
+            .teaching-header-image:hover img {
+                filter: saturate(.9) contrast(.98);
+                transform: scale(1.008)
+            }
+
+        .teaching-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 9vw
+        }
+
+        .teaching-intro > p {
+            max-width: 520px;
+            color: #4c4b45;
+            font-size: 15px;
+            line-height: 1.9;
+            margin: 35px 0
+        }
+
+        .training-note {
+            border-left: 2px solid var(--wine);
+            padding: 6px 0 6px 22px;
+            margin-top: 42px
+        }
+
+            .training-note span {
+                font-size: 9px;
+                letter-spacing: .18em;
+                color: var(--wine);
+                font-weight: 600
+            }
+
+            .training-note p {
+                font-family: var(--display);
+                font-size: 20px;
+                line-height: 1.45;
+                margin: 10px 0
+            }
+
+        .teaching-list {
+            border-top: 1px solid #bcb8ae
+        }
+
+            .teaching-list article {
+                display: grid;
+                grid-template-columns: 120px 1fr;
+                gap: 20px;
+                padding: 23px 0;
+                border-bottom: 1px solid #bcb8ae
+            }
+
+            .teaching-list time {
+                font-size: 10px;
+                color: var(--wine);
+                letter-spacing: .08em
+            }
+
+            .teaching-list h3 {
+                font: 500 22px var(--display);
+                margin: 0 0 6px
+            }
+
+            .teaching-list p {
+                margin: 0;
+                font-size: 12px;
+                line-height: 1.5;
+                color: #6b6961
+            }
+
+        .quote-band {
+            position: relative;
+            min-height: 430px;
+            overflow: hidden;
+            background: #171713;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 6vw;
+        }
+
+            /* Fotografia di sfondo */
+            .quote-band::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background-image: url('image/quote-band.jpg');
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                opacity: .28;
+                z-index: 0;
+            }
+
+            /* Velo scuro sopra la fotografia */
+            .quote-band::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient( 110deg, rgba(66, 12, 19, .72), rgba(24, 23, 20, .78) );
+                z-index: 1;
+            }
+
+            /* Testi sopra fotografia e velo */
+            .quote-band blockquote,
+            .quote-band cite,
+            .quote-band span {
+                position: relative;
+                z-index: 2;
+            }
+
+            .quote-band blockquote {
+                font-size: clamp(42px, 6vw, 82px);
+                font-style: italic;
+            }
+
+            .quote-band cite {
+                margin-top: 24px;
+                font-family: var(--display);
+                font-size: 20px;
+                font-style: italic;
+                color: #e4d8d5;
+            }
+
+            .quote-band span {
+                margin-top: 28px;
+                font-size: 9px;
+                letter-spacing: .3em;
+                color: #d0b8b6;
+            }
+
+        .contact {
+            padding-bottom: 35px
+        }
+
+        .contact-grid > div > p {
+            color: #aaa79f;
+            max-width: 480px;
+            line-height: 1.8
+        }
+
+        .email {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ffffff49;
+            padding: 25px 0 14px;
+            font: 400 clamp(20px, 2.4vw, 34px) var(--display)
+        }
+
+        .socials {
+            display: flex;
+            gap: 30px;
+            margin-top: 35px;
+            font-size: 10px;
+            letter-spacing: .14em;
+            text-transform: uppercase
+        }
+
+        footer {
+            border-top: 1px solid #ffffff2b;
+            margin-top: 110px;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            color: #77756f;
+            font-size: 9px;
+            letter-spacing: .1em;
+            text-transform: uppercase
+        }
+
+        @media(max-width:800px) {
+            .site-header {
+                height: 75px;
+                padding: 0 22px
+            }
+
+                .site-header nav a:not(.nav-cta) {
+                    display: none
+                }
+
+            .hero-copy {
+                width: auto;
+                margin: 0;
+                padding: 80px 23px 20px
+            }
+
+            .hero {
+                min-height: 700px
+            }
+
+            .hero-image {
+                top: 75px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-size: auto 100%;
+                background-position: 72% bottom;
+                background-repeat: no-repeat;
+                opacity: 1
+            }
+
+            .hero-shade {
+                background: linear-gradient(90deg, rgba(8, 8, 7, .94), rgba(8, 8, 7, .22)), linear-gradient(0deg, rgba(0, 0, 0, .58), transparent)
+            }
+
+            .scroll-hint {
+                display: none
+            }
+
+            .section {
+                padding: 85px 24px
+            }
+
+            .section-label {
+                margin-bottom: 45px
+            }
+
+            .profile-grid,
+            .experience-grid,
+            .contact-grid,
+            .teaching-grid {
+                grid-template-columns: 1fr;
+                gap: 45px
+            }
+
+            .stats {
+                gap: 10px
+            }
+
+                .stats strong {
+                    font-size: 34px
+                }
+
+                .stats span {
+                    font-size: 8px
+                }
+
+            .disciplines-head {
+                display: block
+            }
+
+                .disciplines-head p {
+                    width: auto;
+                    margin-top: 30px
+                }
+
+            .discipline-list article {
+                grid-template-columns: 38px 1fr 25px;
+                padding: 24px 0
+            }
+
+                .discipline-list article p {
+                    grid-column: 2/3
+                }
+
+                .discipline-list article b {
+                    grid-column: 3;
+                    grid-row: 1
+                }
+
+            .timeline article {
+                grid-template-columns: 100px 1fr
+            }
+
+            .teaching .section-label {
+                margin-bottom: 32px
+            }
+
+            .teaching-header-image {
+                height: 190px;
+                margin-bottom: 52px
+            }
+
+                .teaching-header-image img {
+                    object-position: center top 
+                }
+
+            .quote-band {
+                min-height: 330px
+            }
+
+
+            .gallery-head {
+                display: block
+            }
+
+                .gallery-head p {
+                    width: auto;
+                    margin-top: 28px
+                }
+
+            .gallery-featured-grid {
+                columns: 2
+            }
+
+            .gallery-all-grid {
+                columns: 2
+            }
+
+            .gallery-modal-inner {
+                width: auto;
+                margin: 0 24px;
+                padding-top: 65px
+            }
+
+            .gallery-modal-head {
+                align-items: start
+            }
+
+            .lightbox-stage {
+                padding: 72px 18px 58px
+            }
+
+            .lightbox-arrow {
+                top: auto;
+                bottom: 14px;
+                transform: none
+            }
+
+            .lightbox-prev {
+                left: 18px
+            }
+
+            .lightbox-next {
+                right: 18px
+            }
+
+            .lightbox-counter {
+                bottom: 31px
+            }
+
+            footer {
+                gap: 30px;
+                flex-direction: column;
+                margin-top: 75px
+            }
+        }
+
+
+        .quote-band cite {
+            margin-top: 24px;
+            font-family: var(--display);
+            font-size: 20px;
+            font-style: italic;
+            color: #e4d8d5;
+        }
+
+        .quote-band span {
+            margin-top: 28px;
+            font-size: 9px;
+            letter-spacing: .3em;
+            color: #d0b8b6;
+        }
+
+        @media(max-width:520px) {
+            .gallery-featured-grid,
+            .gallery-all-grid {
+                columns: 1
+            }
+
+            .gallery-modal-head h2 {
+                font-size: 46px
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="wordmark" href="#home" aria-label="Torna all'inizio"><span>MICAELA</span> VISCARDI</a>
+        <nav aria-label="Navigazione principale"><a href="#profilo">Profilo</a>
+        <a href="#esperienza">Esperienza</a><a href="#galleria">Galleria</a>
+        <a href="#insegnamento">Insegnamento</a><a href="#repertorio">Tecniche</a>
+        <nav aria-label="Navigazione principale">
+            <a class="nav-cta" href="#contatti">Contatti</a></nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-image" aria-hidden="true"></div>
+            <div class="hero-shade"></div>
+            <div class="hero-copy">
+                <p class="eyebrow">Danzatrice professionista · Insegnante</p>
+                <h1>Il corpo racconta<br><em>ciò che le parole</em><br>non sanno dire.</h1>
+                <p class="hero-intro">Tecnica classica, esperienza scenica e passione per la formazione.</p><a class="primary-button" href="#profilo">Scopri il mio percorso <span>↘</span></a>
+            </div><a class="scroll-hint" href="#profilo" aria-label="Scorri al profilo">SCOPRI <span>↓</span></a>
+        </section>
+        <section class="profile section" id="profilo">
+            <div class="section-label"><span>01</span> PROFILO</div>
+            <div class="profile-grid">
+                <h2>Una vita dedicata<br>alla <em>danza.</em></h2>
+                <div class="profile-copy">
+                    <p class="lead">Danzatrice professionista dal 2012, con esperienze nei maggiori teatri italiani e ruoli da solista in compagnie private.</p>
+                    <p>Formata nella tecnica Cecchetti e nella tecnica Vaganova, ha collaborato con coreografi e interpreti di fama internazionale. Unisce rigore, sensibilità artistica e una profonda conoscenza del corpo applicata alla danza.</p>
+                    <div class="stats" aria-label="Dati principali">
+                        <div><strong>14+</strong><span>anni in scena</span></div>
+                        <div><strong>3+</strong><span>grandi teatri</span></div>
+                        <div><strong>7+</strong><span>esperienze didattiche</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="disciplines section" id="repertorio">
+            <div class="section-label light"><span>02</span> TECNICHE</div>
+            <div class="disciplines-head">
+                <h2>Tecnica. Grazia.<br><em>Presenza.</em></h2>
+                <p>Una preparazione accademica solida, arricchita dall’esperienza diretta sul palcoscenico.</p>
+            </div>
+            <div class="discipline-list">
+                <article>
+                    <span>01</span>
+                    <h3>Tecnica Cecchetti</h3>
+                    <p>Controllo, grazia della parte superiore del corpo e qualità del movimento.</p><a href="https://it.wikipedia.org/wiki/Metodo_Cecchetti" target="_blank" rel="noopener noreferrer" aria-label=""><b aria-hidden="true">↗</b></a>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Tecnica Vaganova</h3>
+                    <p>Formazione accademica dal primo al quarto corso e preparazione riconosciuta CONI.</p><a href="https://it.wikipedia.org/wiki/Metodo_Vaganova" target="_blank" rel="noopener noreferrer" aria-label=""><b aria-hidden="true">↗</b></a>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Danza contemporanea</h3>
+                    <p>Fluidità, sensibilità ritmica e consapevolezza anatomica applicata alla danza.</p><a href="https://it.wikipedia.org/wiki/Danza_contemporanea" target="_blank" rel="noopener noreferrer" aria-label=""><b aria-hidden="true">↗</b></a>
+                </article>
+            </div>
+        </section>
+        <section class="experience section" id="esperienza">
+            <div class="section-label"><span>03</span> ESPERIENZA</div>
+            <div class="experience-grid">
+                <div>
+                    <h2>In scena,<br><em>dal 2012.</em></h2>
+                    <p>Una carriera costruita tra grandi corpi di ballo, compagnie private e collaborazioni con artisti di fama internazionale.</p><a class="text-link" href="#insegnamento">Scopri l’attività di insegnamento <span>→</span></a>
+                </div>
+                <div class="timeline">
+                    <article>
+                        <time>2016–in corso</time>
+                        <div>
+                            <h3>Arena di Verona</h3>
+                            <p>Corpo di ballo</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2017–2019</time>
+                        <div>
+                            <h3>Teatro Massimo di Palermo</h3>
+                            <p>Corpo di ballo</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2015</time>
+                        <div>
+                            <h3>Teatro alla Scala di Milano</h3>
+                            <p>Corpo di ballo</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2012–in corso</time>
+                        <div>
+                            <h3>Produzioni e compagnie</h3>
+                            <p>Balletto di Roma, Daniele Cipriani Entertainment, Compagnia Francesca Selva e altri progetti</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section section" id="galleria">
+            <div class="section-label light"><span>04</span> GALLERIA</div>
+            <div class="gallery-head">
+                <h2>Corpo. Scena.<br><em>Movimento.</em></h2>
+                <p>Una selezione di immagini dal palcoscenico e dal percorso artistico. Clicca su una fotografia per visualizzarla a schermo intero.</p>
+            </div>
+
+            <div class="gallery-featured" aria-label="Selezione fotografica">
+                <div class="gallery-featured-main">
+                    <button class="gallery-photo" type="button" data-gallery-index="0" aria-label="Apri fotografia 1 a schermo intero">
+                        <img src="image/gallery-01.jpg" alt="Micaela Viscardi, fotografia artistica 1">
+                    </button>
+                </div>
+
+                <div class="gallery-featured-grid">
+                    <button class="gallery-photo" type="button" data-gallery-index="1" aria-label="Apri fotografia 2 a schermo intero">
+                        <img src="image/gallery-02.jpg" alt="Micaela Viscardi, fotografia artistica 2" loading="lazy">
+                    </button>
+                    <button class="gallery-photo" type="button" data-gallery-index="2" aria-label="Apri fotografia 3 a schermo intero">
+                        <img src="image/gallery-03.jpg" alt="Micaela Viscardi, fotografia artistica 3" loading="lazy">
+                    </button>
+                    <button class="gallery-photo" type="button" data-gallery-index="3" aria-label="Apri fotografia 4 a schermo intero">
+                        <img src="image/gallery-04.jpg" alt="Micaela Viscardi, fotografia artistica 4" loading="lazy">
+                    </button>
+                    <button class="gallery-photo" type="button" data-gallery-index="4" aria-label="Apri fotografia 5 a schermo intero">
+                        <img src="image/gallery-05.jpg" alt="Micaela Viscardi, fotografia artistica 5" loading="lazy">
+                    </button>
+                    <button class="gallery-photo" type="button" data-gallery-index="5" aria-label="Apri fotografia 6 a schermo intero">
+                        <img src="image/gallery-06.jpg" alt="Micaela Viscardi, fotografia artistica 6" loading="lazy">
+                    </button>
+                    <button class="gallery-photo" type="button" data-gallery-index="6" aria-label="Apri fotografia 7 a schermo intero">
+                        <img src="image/gallery-07.jpg" alt="Micaela Viscardi, fotografia artistica 7" loading="lazy">
+                    </button>
+                </div>
+            </div>
+
+            <div class="gallery-actions">
+                <button class="gallery-open-all" type="button">Vedi tutta la galleria <span aria-hidden="true">→</span></button>
+            </div>
+        </section>
+
+        <section class="teaching section" id="insegnamento">
+            <div class="section-label"><span>05</span> INSEGNAMENTO</div>
+
+            <!--  <div class="teaching-header-image">
+          <img src="image/teaching-header.jpg"
+               alt="Micaela Viscardi durante una lezione di danza"
+               loading="lazy"
+               decoding="async">
+      </div>-->
+
+
+
+            <div class="teaching-grid">
+                <div class="teaching-intro">
+                    <h2>Trasmettere<br>l’arte del <em>movimento.</em></h2>
+                    <p>Un approccio didattico attento alla postura, alla respirazione, alla fluidità e alla sensibilità ritmica. La lunga esperienza scenica diventa uno strumento concreto per accompagnare allievi di età e livelli diversi.</p>
+                    <div class="training-note">
+                        <span>FORMAZIONE</span>
+                        <p>Insegnante di Danza Classica Accademica, dal primo al quarto corso Vaganova, con formazione riconosciuta CONI.</p>
+                    </div>
+                </div>
+                <div class="teaching-list">
+                    <article>
+                        <time>2023–in corso</time>
+                        <div>
+                            <h3><a href="https://villaggiodellearti.wpcomstaging.com/" target="_blank" rel="noopener noreferrer" aria-label="">Villaggio delle Arti ↗</a></h3>
+                            <p>Insegnante di danza · Roma</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2022–in corso</time>
+                        <div>
+                            <h3><a href="https://balance-harmony-it.webnode.it/" target="_blank" rel="noopener noreferrer" aria-label="">Balance & Harmony ↗</a></h3>
+                            <p>Insegnante di danza · Roma</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2019–2022</time>
+                        <div>
+                            <h3>Takemusu Dojo</h3>
+                            <p>Insegnante di danza · Roma</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2018–2021</time>
+                        <div>
+                            <h3>Accademia Europea di Danza</h3>
+                            <p>Dai primi corsi al Triennio per Danzatori e Coreografi · Roma</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2019–2020</time>
+                        <div>
+                            <h3>Matricardi Sport</h3>
+                            <p>Insegnante di danza · Roma</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2012–2014</time>
+                        <div>
+                            <h3>Hamlyn</h3>
+                            <p>Insegnante di danza · Firenze</p>
+                        </div>
+                    </article>
+                    <article>
+                        <time>2011–2012</time>
+                        <div>
+                            <h3>Centro Studi Danza</h3>
+                            <p>Assistente al corso di propedeutica · Roma</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="quote-band" aria-label="Citazione artistica">
+            <blockquote>
+                “La danza può rivelare tutto il mistero che la musica tiene nascosto.”
+            </blockquote>
+
+            <cite>Charles Baudelaire</cite>
+
+            <span>RICERCA · ASCOLTO · TRASFORMAZIONE</span>
+        </section>
+        <section class="contact section" id="contatti">
+            <div class="section-label light"><span>06</span> CONTATTI</div>
+            <div class="contact-grid">
+                <h2>Creiamo qualcosa<br><em>insieme.</em></h2>
+                <div>
+                    <p>Disponibile per produzioni, spettacoli, corsi di danza classica, propedeutica, workshop e collaborazioni artistiche.</p><a class="email" href="mailto:micaelaviscardi@libero.it">micaelaviscardi@libero.it <span>↗</span></a>
+                    <div class="socials"><a href="https://www.instagram.com/miciaela/">Instagram</a><a href="https://www.facebook.com/micaela.viscardi/?locale=it_IT">Facebook</a><a href="#">LinkedIn</a></div>
+                </div>
+            </div>
+            <footer><span><a href="https://www.andreavennarucci.com" target="_blank" rel="noopener noreferrer" aria-label="">© 2026 Andrea Vennarucci</a></span><a href="https://www.andreavennarucci.com" target="_blank" rel="noopener noreferrer" aria-label="">Andrea Vennarucci · All rights reserved</a></footer>
+        </section>
+    </main>
+
+    <div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle" aria-hidden="true">
+        <div class="gallery-modal-inner">
+            <div class="gallery-modal-head">
+                <div>
+                    <p>Archivio fotografico</p>
+                    <h2 id="galleryModalTitle">Galleria completa</h2>
+                </div>
+                <button class="gallery-close" type="button" aria-label="Chiudi la galleria">×</button>
+            </div>
+            <div class="gallery-all-grid" id="galleryAllGrid"></div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzazione fotografia a schermo intero" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Chiudi fotografia">×</button>
+        <button class="lightbox-arrow lightbox-prev" type="button" aria-label="Fotografia precedente">←</button>
+        <div class="lightbox-stage">
+            <img class="lightbox-image" src="" alt="">
+        </div>
+        <button class="lightbox-arrow lightbox-next" type="button" aria-label="Fotografia successiva">→</button>
+        <div class="lightbox-counter" aria-live="polite"></div>
+    </div>
+
+
+    <script>
+        (() => {
+            /*
+             * Le fotografie della galleria devono trovarsi nella cartella "image"
+             * e chiamarsi gallery-01.jpg, gallery-02.jpg ... gallery-50.jpg.
+             * Per cambiare il numero totale di foto è sufficiente modificare
+             * GALLERY_IMAGE_COUNT.
+             */
+            const GALLERY_IMAGE_COUNT = 58;
+
+            const galleryImages = Array.from(
+                { length: GALLERY_IMAGE_COUNT },
+                (_, index) => `image/gallery-${String(index + 1).padStart(2, "0")}.jpg`
+            );
+
+            const galleryModal = document.getElementById("galleryModal");
+            const galleryAllGrid = document.getElementById("galleryAllGrid");
+            const openAllButton = document.querySelector(".gallery-open-all");
+            const galleryClose = document.querySelector(".gallery-close");
+
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImage = lightbox.querySelector(".lightbox-image");
+            const lightboxClose = lightbox.querySelector(".lightbox-close");
+            const lightboxPrev = lightbox.querySelector(".lightbox-prev");
+            const lightboxNext = lightbox.querySelector(".lightbox-next");
+            const lightboxCounter = lightbox.querySelector(".lightbox-counter");
+
+            let currentIndex = 0;
+            let lastFocusedElement = null;
+            let touchStartX = null;
+
+            const updateBodyLock = () => {
+                const anythingOpen =
+                    galleryModal.classList.contains("is-open") ||
+                    lightbox.classList.contains("is-open");
+
+                document.body.classList.toggle("gallery-lock", anythingOpen);
+            };
+
+            const showLightboxImage = index => {
+                currentIndex = (index + galleryImages.length) % galleryImages.length;
+                lightboxImage.src = galleryImages[currentIndex];
+                lightboxImage.alt = `Micaela Viscardi, fotografia artistica ${currentIndex + 1}`;
+                lightboxCounter.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+            };
+
+            const openLightbox = index => {
+                lastFocusedElement = document.activeElement;
+                showLightboxImage(index);
+                lightbox.classList.add("is-open");
+                lightbox.setAttribute("aria-hidden", "false");
+                updateBodyLock();
+                lightboxClose.focus();
+            };
+
+            const closeLightbox = () => {
+                lightbox.classList.remove("is-open");
+                lightbox.setAttribute("aria-hidden", "true");
+                lightboxImage.src = "";
+                updateBodyLock();
+
+                if (lastFocusedElement && document.contains(lastFocusedElement)) {
+                    lastFocusedElement.focus();
+                }
+            };
+
+            const openGalleryModal = () => {
+                lastFocusedElement = document.activeElement;
+                galleryModal.classList.add("is-open");
+                galleryModal.setAttribute("aria-hidden", "false");
+                updateBodyLock();
+                galleryClose.focus();
+            };
+
+            const closeGalleryModal = () => {
+                galleryModal.classList.remove("is-open");
+                galleryModal.setAttribute("aria-hidden", "true");
+                updateBodyLock();
+
+                if (lastFocusedElement && document.contains(lastFocusedElement)) {
+                    lastFocusedElement.focus();
+                }
+            };
+
+            /*
+             * Costruzione automatica della galleria completa.
+             * Le immagini vengono caricate in lazy loading.
+             */
+            const fragment = document.createDocumentFragment();
+
+            galleryImages.forEach((src, index) => {
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "gallery-photo";
+                button.dataset.galleryIndex = index;
+                button.setAttribute(
+                    "aria-label",
+                    `Apri fotografia ${index + 1} a schermo intero`
+                );
+
+                const image = document.createElement("img");
+                image.src = src;
+                image.alt = `Micaela Viscardi, fotografia artistica ${index + 1}`;
+                image.loading = "lazy";
+                image.decoding = "async";
+
+                button.appendChild(image);
+                fragment.appendChild(button);
+            });
+
+            galleryAllGrid.appendChild(fragment);
+
+            /*
+             * Se un file non esiste ancora, il relativo riquadro viene nascosto
+             * invece di mostrare l'icona di immagine non disponibile.
+             */
+            document.querySelectorAll(".gallery-photo img").forEach(image => {
+                image.addEventListener("error", () => {
+                    const button = image.closest(".gallery-photo");
+                    if (button) {
+                        button.hidden = true;
+                    }
+                });
+            });
+
+            document.addEventListener("click", event => {
+                const photo = event.target.closest(".gallery-photo");
+
+                if (photo) {
+                    const index = Number(photo.dataset.galleryIndex);
+                    openLightbox(index);
+                    return;
+                }
+
+                if (
+                    event.target === lightbox ||
+                    event.target.classList.contains("lightbox-stage")
+                ) {
+                    closeLightbox();
+                }
+
+                if (event.target === galleryModal) {
+                    closeGalleryModal();
+                }
+            });
+
+            openAllButton.addEventListener("click", openGalleryModal);
+            galleryClose.addEventListener("click", closeGalleryModal);
+            lightboxClose.addEventListener("click", closeLightbox);
+
+            lightboxPrev.addEventListener("click", () => {
+                showLightboxImage(currentIndex - 1);
+            });
+
+            lightboxNext.addEventListener("click", () => {
+                showLightboxImage(currentIndex + 1);
+            });
+
+            document.addEventListener("keydown", event => {
+                if (lightbox.classList.contains("is-open")) {
+                    if (event.key === "Escape") {
+                        closeLightbox();
+                    } else if (event.key === "ArrowLeft") {
+                        showLightboxImage(currentIndex - 1);
+                    } else if (event.key === "ArrowRight") {
+                        showLightboxImage(currentIndex + 1);
+                    }
+                    return;
+                }
+
+                if (
+                    galleryModal.classList.contains("is-open") &&
+                    event.key === "Escape"
+                ) {
+                    closeGalleryModal();
+                }
+            });
+
+            /*
+             * Su smartphone è possibile passare alla foto precedente/successiva
+             * anche con uno swipe orizzontale.
+             */
+            lightbox.addEventListener("touchstart", event => {
+                touchStartX = event.changedTouches[0].clientX;
+            }, { passive: true });
+
+            lightbox.addEventListener("touchend", event => {
+                if (touchStartX === null) {
+                    return;
+                }
+
+                const deltaX = event.changedTouches[0].clientX - touchStartX;
+
+                if (Math.abs(deltaX) > 55) {
+                    showLightboxImage(
+                        deltaX > 0 ? currentIndex - 1 : currentIndex + 1
+                    );
+                }
+
+                touchStartX = null;
+            }, { passive: true });
+        })();
+    </script>
+
+</body>
+
+</html>
